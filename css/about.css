@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+:root{
+    --main-color:#d3ad7f;
+    --black:#13131a;
+    --bg:#010103;
+    --border:.1rem solid rgba(255,255,255,.3);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    font-family: 'Silkscreen', cursive;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #808080;
+    border-radius: 5rem;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.9rem 3rem;
+    font-size: 1.7rem;
+    color:#fff;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.btn:hover{
+    letter-spacing: .2rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    transition: background 0.2s linear;
+}
+
+body.dark {background-color: #292c35;} /* #9b59b6 */
+
+body.dark h1, body.dark .support a {color: #fff;}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+  }
+  
+  .checkbox-label {
+    background-color: #fffafa;
+    width: 60px;
+    height: 30px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .checkbox-label .ball {
+    background-color: #000000;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+  }
+  
+  .checkbox:checked + .checkbox-label .ball {
+    transform: translateX(32px);
+  }
+
+  section {
+    padding: 2rem 7%;
+    margin-bottom: 4rem; /* Added margin-bottom to create space between sections */
+  }
+
+.heading{
+    text-align: center;
+    color:#000000;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 100px;
+    background: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.logo-container img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.logo {
+    font-size: 1.5em;
+    color: #fff;
+    user-select: none;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover:after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.row1 {
+    position: relative;
+    height: 100vh; /* Added height to make the section fill the viewport */
+  }
+
+   .overlay {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       background-color: rgba(0, 0, 0, 0.5);
+       color: #fff;
+       text-align: center;
+       z-index: 1;
+       /* Ensure overlay is on top of the video */
+   }
+
+   .overlay h1 {
+       font-size: 54px;
+       font-family: 'Georgia', serif;
+       margin-bottom: 20px;
+   }
+
+   .overlay p {
+       font-size: 18px;
+       font-family: 'Courier New', Courier, monospace;
+       font-weight: 300;
+   }
+
+   .scroll-content {
+       padding: 40px;
+   }
+
+   .scroll-content .content-container {
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       margin-bottom: 40px;
+   }
+
+   .scroll-content .content-container .text-container {
+       flex: 1;
+       padding: 20px;
+       text-align: center;
+   }
+
+   .scroll-content .content-container .text-container p {
+       font-size: 18px;
+   }
+
+   .scroll-content .content-container .image-container {
+       flex: 1;
+       margin: 0 20px;
+   }
+
+   .scroll-content .content-container .image-container img {
+       max-width: 100%;
+       height: auto;
+       margin-bottom: 20px;
+   }
+
+   body.dark {
+    background-color: #292c35;
+    color: #fff; /* Added to change the default text color in dark mode */
+  }
+  
+footer {
+    margin-top: auto;
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+    
+.footer-content {
+    color: #ffffff;
+    font-size: 14px;
+}
+    
+.social-icons a {
+    margin-right: 10px;
+    color: #888888;
+    font-size: 24px;
+}
+    
+.social-icons a:last-child {
+    margin-right: 0;
+}

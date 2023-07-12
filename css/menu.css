@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+:root{
+    --main-color:#d3ad7f;
+    --black:#13131a;
+    --bg:#010103;
+    --border:.1rem solid rgba(255,255,255,.3);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    font-family: 'Silkscreen', cursive;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #808080;
+    border-radius: 5rem;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.9rem 3rem;
+    font-size: 1.7rem;
+    color:#fff;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.btn:hover{
+    letter-spacing: .2rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    transition: background 0.2s linear;
+}
+
+body.dark {background-color: #292c35;} /* #9b59b6 */
+
+body.dark h1, body.dark .support a {color: #fff;}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+  }
+  
+  .checkbox-label {
+    background-color: #fffafa;
+    width: 60px;
+    height: 30px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .checkbox-label .ball {
+    background-color: #000000;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+  }
+  
+  .checkbox:checked + .checkbox-label .ball {
+    transform: translateX(32px);
+  }
+
+section{
+    padding:2rem 7%;
+}
+
+.heading{
+    text-align: center;
+    color:#000000;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 100px;
+    background: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.logo-container img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.logo {
+    font-size: 1.5em;
+    color: #fff;
+    user-select: none;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover:after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.heading2 {
+    text-align: center;
+    color:#000000;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+.dark .heading2 {
+    color: #fff; /* Set the desired color for dark mode */
+  }
+  
+  .row1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: .50px;
+  }
+  
+  .row2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .row3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .menu-card {
+    position: relative;
+    width: 250px;
+    height: 500px;
+    background: #212121;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 1px solid #252525;
+    margin: 10px;
+    box-shadow: 5px 5px 15px 5px #666666;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .menu-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .menu-card .menu-card-img {
+    position: relative;
+    width: 100%;
+    height: 70%;
+  }
+  
+  .menu-card-img > img {
+    width: 100%;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    position: absolute;
+    box-shadow: 0 3.4px 2.7px rgba(0, 0, 0, 0.022);
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .menu-card .menu-card-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    position: absolute;
+    bottom: 32%;
+    right: 5%;
+    font-size: 1.2rem;
+    color: #111;
+    opacity: 0.8;
+    background: #c59d5f;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .menu-card .menu-card-btn:hover {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  
+  .menu-card-body {
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .food-detail h4 {
+    font-size: 2.0rem;
+    font-weight: bold;
+    color: #fff;
+    margin: 10px auto 5px;
+  }
+  
+  .food-detail p {
+    font-size: 1.0rem;
+    font-weight: 500;
+    color: #999;
+    margin: 0 auto 5px;
+    font-family: Poppins;
+  }
+  
+  .food-price p {
+    font-size: 2.0rem;
+    font-weight: bold;
+    color: #c59d5f;
+    text-align: right;
+  }  
+
+footer {
+    margin-top: auto;
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+    
+.footer-content {
+    color: #ffffff;
+    font-size: 14px;
+}
+    
+.social-icons a {
+    margin-right: 10px;
+    color: #888888;
+    font-size: 24px;
+}
+    
+.social-icons a:last-child {
+    margin-right: 0;
+}
